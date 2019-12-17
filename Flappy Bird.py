@@ -11,7 +11,7 @@ from Base import *
 from Pipe import *
 
 WIN_WIDTH = 550
-WIN_HEIGHT = 800
+WIN_HEIGHT = 800    
 BASE_LVL = 730
 
 GEN = 0
@@ -21,7 +21,7 @@ BG_IMG = pygame.transform.scale2x(pygame.image.load(os.path.join("imgs", "bg.png
 
 STAT_FONT = pygame.font.SysFont('comicsans', 50)
 
-
+os.environ['SDL_VIDEO_CENTERED'] = '1'
 
 def draw_window(win, birds, pipes, base, score, gen):
 
@@ -67,12 +67,15 @@ def main(genomes, config):
     score = 0
     run = True
     while run:
-        clock.tick(120)
+        clock.tick(45)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run == False  
                 pygame.quit()
                 quit()
+            # if event.type == pygame.KEYDOWN:
+            #     if event.key == pygame.K_SPACE:
+            #         bird.jump()
 
         pipe_ind = 0
         if len(birds) > 0:

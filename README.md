@@ -17,6 +17,6 @@ in cmd prompt in the same directory.
 
 You can also tinker with values in the `config-feedforward.txt` to see how they affect the learning...
 
-## preview
+## Preview
 
 ![](https://github.com/VaibhavSaini19/Flappy-Bird-Pygame-NEAT/blob/master/preview.gif)
